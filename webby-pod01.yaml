@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webservice01
+spec:
+  containers:
+  - name: webby-1913
+    image: reg.alta3.com/1913-kafor-webby
+    ports:
+    - name: webby-port
+      containerPort: 8888
+      protocol: TCP
+

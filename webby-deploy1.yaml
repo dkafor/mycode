@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webby
+  labels:
+   app: webby
+spec:
+  selector:
+    matchLabels:
+      app: webby
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: webby
+    spec:
+      containers:
+      - name: webby
+        image: reg.alta3.com/1913-kafor-webby     #REPLACE "000-lastname" with the name of your image you created!!
+        ports:
+        - containerPort: 8888
